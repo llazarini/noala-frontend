@@ -1,0 +1,30 @@
+
+.actions {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+
+.images {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    @media only screen and (max-width: 960px) {
+        flex-flow: column;
+    }
+    .image {
+        display: flex;
+        flex-flow: column;
+        img {
+            width: 12rem;
+            height: 10rem;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        button {
+            flex: 1;
+        }
+    }
+}

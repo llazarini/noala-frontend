@@ -1,0 +1,14 @@
+
+<div class="actions">
+    <button color="primary" mat-raised-button (click)="randomImages()">I need more dogs</button>
+</div>
+
+<div class="images">
+    <div class="image" *ngFor="let image of images">
+        <img [src]="image.url" [class.favorite]="isFavorite(image)">
+        <button mat-stroked-button color="primary" (click)="favorite(image)">
+            {{ !isFavorite(image) ? 'Favorite' : 'Unfavorite' }}
+        </button>
+    </div>
+</div>
+
